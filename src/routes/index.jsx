@@ -1,5 +1,9 @@
 import App from "@/App";
 
+import LoginPage from "@/pages/Login/page";
+import NotFoundPage from "@/pages/NotFound/page";
+import RegisterPage from "@/pages/Register/page";
+
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -9,22 +13,18 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: (
-          <div>
-            <h1>Hello guys</h1>
-          </div>
-        ),
+        element:<LoginPage/>
       },
       {
-        path: "/login",
-        element: (
-          <div>
-            <h1>Please, Login</h1>
-          </div>
-        ),
+        path: "/register",
+        element: <RegisterPage />,
       },
     ],
   },
+  {
+    path:"/*",
+    element : <NotFoundPage/>
+  }
 ]);
 
 export default router;
