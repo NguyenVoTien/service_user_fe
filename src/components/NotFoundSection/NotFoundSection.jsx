@@ -4,6 +4,7 @@ import React from 'react'
 import Heading from '../Heading'
 import Text from '../Text'
 import Button from '../Button'
+import { NavLink } from 'react-router-dom'
 
 
 const NotFoundSection = () => {
@@ -20,9 +21,12 @@ const NotFoundSection = () => {
                             Your visted page not found. You may go home page
                         </Text>
                     </div>
+                    <NavLink to="/">
                     <Button color='secondary_2' size='5xl'>
                         Back to home page
                     </Button>
+                    </NavLink>
+                   
                 </div>
             </div>
         </div>
